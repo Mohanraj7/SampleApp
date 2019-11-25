@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkgrey"
+    android:padding="50sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <!--Load - Pick Label-->
+        <RelativeLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="LOAD - STOPOVER"
+                android:textColor="@color/white"
+                android:fontFamily="@font/courier"
+                android:gravity="center"
+                android:textSize="25sp"/>
+
+            <ImageView
+                android:id="@+id/img_close_stopover"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/close"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <!--Customer Sign Button-->
+        <Button
+            android:layout_margin="10sp"
+            android:id="@+id/btn_start_loading_stopover"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="START LOADING"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/bauhaus"
+            android:textSize="20sp"/>
+
+        <!--Upload Docs Button-->
+        <Button
+            android:layout_margin="10sp"
+            android:id="@+id/btn_deadrun_stopover"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="DEADRUN"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/bauhaus"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

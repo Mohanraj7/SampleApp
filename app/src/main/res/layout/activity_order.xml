@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorOrange">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:id="@+id/img_menu"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu"
+                android:tint="@color/black"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:id="@+id/menuTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Order"
+                android:fontFamily="@font/bauhaus"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                android:background="@color/black">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/header_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="150sp"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/default_user_propic"
+                            android:layout_centerInParent="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_below="@id/header_layout"
+                        android:id="@+id/list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!--Edit Profile Layout-->
+                        <LinearLayout
+                            android:id="@+id/nav_profile_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="52sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:id="@+id/edit_profile"
+                                android:layout_width="match_parent"
+                                android:layout_height="50sp"
+                                android:singleLine="true"
+                                android:paddingBottom="5sp"
+                                android:gravity="center|bottom"
+                                android:text="Edit Profile"
+                                android:fontFamily="@font/courier"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"/>
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="3sp"
+                                android:background="@color/colorOrange"
+                                android:layout_marginLeft="20sp"
+                                android:layout_marginRight="20sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_book_now_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="52sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:id="@+id/txt_current_day_orders"
+                                android:layout_width="match_parent"
+                                android:layout_height="50sp"
+                                android:singleLine="true"
+                                android:paddingBottom="5sp"
+                                android:gravity="center|bottom"
+                                android:text="Current Day Orders"
+                                android:fontFamily="@font/courier"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"/>
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="3sp"
+                                android:background="@color/colorOrange"
+                                android:layout_marginLeft="20sp"
+                                android:layout_marginRight="20sp"/>
+
+                        </LinearLayout>
+
+                        <!--Completed Orders Layout-->
+                        <LinearLayout
+                            android:id="@+id/nav_reservation_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="52sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:id="@+id/txt_completed_orders"
+                                android:layout_width="match_parent"
+                                android:layout_height="50sp"
+                                android:singleLine="true"
+                                android:paddingBottom="5sp"
+                                android:gravity="center|bottom"
+                                android:text="Completed Orders"
+                                android:fontFamily="@font/courier"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"/>
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="3sp"
+                                android:background="@color/colorOrange"
+                                android:layout_marginLeft="20sp"
+                                android:layout_marginRight="20sp"/>
+                        </LinearLayout>
+
+                        <!--Next Day Orders Layout-->
+                        <LinearLayout
+                            android:id="@+id/nav_favourite_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="52sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:id="@+id/txt_next_day_orders"
+                                android:layout_width="match_parent"
+                                android:layout_height="50sp"
+                                android:singleLine="true"
+                                android:paddingBottom="5sp"
+                                android:gravity="center|bottom"
+                                android:text="Next Day Orders"
+                                android:fontFamily="@font/courier"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"/>
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="3sp"
+                                android:background="@color/colorOrange"
+                                android:layout_marginLeft="20sp"
+                                android:layout_marginRight="20sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--logout Button Layout-->
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="50sp"
+                        android:layout_marginLeft="50sp"
+                        android:layout_marginRight="50sp"
+                        android:layout_marginBottom="30sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_corner_light_orange_button">
+                        <TextView
+                            android:id="@+id/btn_logout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:text="Logout"
+                            android:fontFamily="@font/courier"
+                            android:drawablePadding="5sp"
+                            android:drawableTint="@color/white"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+            </android.support.design.widget.NavigationView>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/white_color_rounded_layout"
+    android:padding="10sp">
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_marginTop="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="asdsd asdasd asdsa sadasd asd sad asd as dsa asd as dsa asd a d"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="17sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/ripple_black"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txt_recheck"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/ripple_red"
+            android:text="RECHECK"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

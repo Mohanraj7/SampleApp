@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ActivityProfile"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorOrange">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/img_back"
+                android:padding="10sp"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/backbutton"
+                android:tint="@color/black"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="PROFILE"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/bauhaus"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--Avatar Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:paddingLeft="20sp">
+
+        <ImageView
+            android:id="@+id/img_propic"
+            android:layout_width="100sp"
+            android:layout_height="130sp"
+            android:src="@drawable/ic_menu_manage"
+            android:tint="@color/grey"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgbtn_uploadpropic"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginLeft="-15sp"
+            android:layout_marginBottom="10sp"
+            android:src="@drawable/editbutton"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+    <!--Personal Details Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_borderbbg"
+        android:layout_margin="10sp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERSONAL DETAILS"
+                android:fontFamily="@font/bauhaus"
+                android:textSize="15sp"
+                android:textColor="@color/colorOrange"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name  :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nick Name  :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email      :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone      :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOB        :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_editpersonaldetails"
+            android:layout_alignParentRight="true"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/editbutton" />
+
+    </RelativeLayout>
+
+    <!--Licence Details Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_borderbbg"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borderbbg"
+            android:orientation="vertical"
+            android:paddingLeft="5sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LICENCE DETAILS"
+                android:fontFamily="@font/bauhaus"
+                android:textSize="15sp"
+                android:textColor="@color/colorOrange"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lic. No    :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_lic_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lic. State :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_lic_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lic. Exp   :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_lic_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_editlicensedetails"
+            android:layout_alignParentRight="true"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/editbutton" />
+    </RelativeLayout>
+
+    <!--Address Details Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_borderbbg"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="10sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borderbbg"
+            android:layout_margin="5sp"
+            android:orientation="vertical"
+            android:paddingLeft="5sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS DETAILS"
+                android:fontFamily="@font/bauhaus"
+                android:textSize="15sp"
+                android:textColor="@color/colorOrange"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Street     :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City       :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State      :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country    :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zip        :"
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOrange"/>
+                <TextView
+                    android:id="@+id/txt_zip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/courier"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_editaddressdetails"
+            android:layout_alignParentRight="true"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginRight="5sp"
+            android:src="@drawable/editbutton" />
+    </RelativeLayout>
+
+    <!--Change Password Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@drawable/rounded_borderbbg"
+        android:layout_margin="10sp"
+        android:orientation="vertical"
+        android:paddingLeft="5sp">
+
+        <TextView
+            android:id="@+id/txtvw_changepassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password?"
+            android:fontFamily="@font/courier"
+            android:textSize="15sp"
+            android:textColor="@color/colorOrange"
+            android:layout_gravity="left"
+            android:paddingTop="8sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

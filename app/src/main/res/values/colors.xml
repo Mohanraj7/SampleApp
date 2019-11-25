@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorOrange">#FF6F00</color>
+
+
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="transparent">#00000000</color>
+    <color name="cancel_booking">#3E82F7</color>
+    <color name="light_blue">#3E82F7</color>
+    <color name="button">#ff8b2e</color>
+    <color name="app_color">#ff8b2e</color>
+    <color name="menu_icon_color">#ff8b2e</color>
+    <color name="light_orange1">#fcc497</color>
+    <color name="very_light_orange">#fff4e2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="maroon">#be5553</color>
+    <color name="darkgrey">#555555</color>
+    <color name="med_grey">#9C9C9C</color>
+    <color name="grey">#AAAAAA</color>
+    <color name="light_grey">#CBCBCB</color>
+    <color name="very_light_grey">#f3f3f3</color>
+    <color name="red_dark">#ffcc0000</color>
+    <color name="light_green">#36C000</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#383737</color>
+    <color name="hint_color">#D3D3D3</color>
+    <color name="accepted_green">#008000</color>
+    <color name="cancel_red">#8B0000</color>
+    <color name="red">#ff0000</color>
+    <color name="tworange">#E18200</color>
+    <color name="tw_light_grey">#EBEBEC</color>
+    <color name="light_orange">#fca23b</color>
+
+    <color name="cellbackSelected">#F4F3F3</color>
+    <color name="cellbackhover">#FCD5DD</color>
+    <color name="cellback">#FFFFFF</color>
+</resources>

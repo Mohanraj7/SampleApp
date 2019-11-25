@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ActivitySignature"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_signature_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorOrange"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:src="@drawable/backbutton"
+                android:background="@color/colorOrange"
+                android:layout_gravity="right"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SIGNATURE"
+                android:fontFamily="@font/bauhaus"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_clearbutton"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginLeft="10sp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="Clear"
+                android:fontFamily="@font/courier"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_corner_light_orange_button"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_savebutton"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="10sp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="Save"
+                android:fontFamily="@font/courier"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_corner_light_orange_button"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

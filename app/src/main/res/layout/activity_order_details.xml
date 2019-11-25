@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tw_light_grey"
+    android:orientation="vertical"
+    tools:context=".Activities.ActivityOrderDetails">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorOrange">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/bauhaus93"
+            android:gravity="center|center_horizontal"
+            android:text="ORDER DETAILS"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_ref"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/courier"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txt_vehicle_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/courier"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bauhaus93"
+                        android:text="START"
+                        android:textColor="@color/white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_startbuttonblack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/startbuttonblack"/>
+
+                    <TextView
+                        android:id="@+id/txt_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bauhaus93"
+                        android:text="START"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="100sp"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                        android:id="@+id/img_startbuttongreen"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:src="@drawable/startbuttongreen"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:fontFamily="@font/bauhaus93"-->
+<!--                        android:text="START"-->
+<!--                        android:textColor="@color/white" />-->
+<!--                </RelativeLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/colorOrange">
+
+                    <TextView
+                        android:id="@+id/txt_pickup_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bauhaus"
+                        android:gravity="center"
+                        android:text="PICKUP DETAILS"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_pickup_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="220sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_marginTop="10sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="11:30 AM"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_addrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:fontFamily="@font/courier"
+                            android:text="21 Kings Street West"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_spl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="SPL"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_spl_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:fontFamily="@font/courier"
+                            android:paddingLeft="41sp"
+                            android:text="21 Kings Street West"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp">
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="Pickup Name"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp">
+
+                        <TextView
+                            android:id="@+id/txt_pickupdetails_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="11111111111"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90sp"
+                        android:orientation="vertical">
+
+                        <!--Arrive Units Docs Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp">
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_arrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="ARRIVE"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_units"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="UNITS"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_docs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="DOCS"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <!--Load Upload Go Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginRight="10sp">
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_load"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="LOAD"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_upload"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="UPLOAD"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_pickupdetails_go"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="GO"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/colorOrange">
+
+                    <TextView
+                        android:id="@+id/txt_stopover_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bauhaus"
+                        android:gravity="center"
+                        android:text="STOPOVER DETAILS"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_stopover_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="220sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:layout_marginTop="10sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="02:30 PM"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_addrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:fontFamily="@font/courier"
+                            android:text="756 Front St W,Toronto,ON,Canada"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_spl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="SPL"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_spl_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:fontFamily="@font/courier"
+                            android:paddingLeft="41sp"
+                            android:text="Stop Over Instruction"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp">
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="Stop Contact"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp">
+
+                        <TextView
+                            android:id="@+id/txt_stopoverdetails_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courier"
+                            android:text="22222222222"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90sp"
+                        android:orientation="vertical">
+
+                        <!--Arrive Units Docs Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginRight="10sp">
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_arrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="ARRIVE"
+                                android:textColor="@color/grey"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_units"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="UNITS"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_docs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="DOCS"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <!--Load Upload Go Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginRight="10sp">
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_load"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="LOAD"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_upload"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="UPLOAD"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_stopoverdetails_go"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:gravity="center"
+                                android:text="GO"
+                                android:enabled="false"
+                                android:fontFamily="@font/bauhaus"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/colorOrange">
+
+                    <TextView
+                        android:id="@+id/txt_dropoff_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bauhaus"
+                        android:gravity="center"
+                        android:text="DROPOFF DETAILS"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_dropoff_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="220sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:visibility="gone">
+
+                    <!--Time and Pickup Address Layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_dropoffdetails_time"
+                            android:layout_width="150sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/courier"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="11:30 AM"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_dropoffdetails_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/courier"
+                            android:gravity="center_vertical"
+                            android:text="49 Yonge St,Toronto,ON,Canada"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!--SPL Layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_dropoffdetails_spl"
+                            android:layout_width="150sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/courier"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="SPL"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_dropoffdetails_spl_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/courier"
+                            android:gravity="center_vertical"
+                            android:text="Drop off Instruction"
+                            android:textColor="@color/colorOrange"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!--Dropoff Name Layout-->
+                    <TextView
+                        android:id="@+id/txt_dropoffdetails_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:fontFamily="@font/courier"
+                        android:gravity="center_vertical"
+                        android:text="Dropoff Name"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <!--Dropoff Number Layout-->
+                    <TextView
+                        android:id="@+id/txt_dropoffdetails_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:fontFamily="@font/courier"
+                        android:gravity="center_vertical"
+                        android:text="1111111111"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <!--Buttons Layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90sp"
+                        android:orientation="vertical">
+
+                        <!--Arrive Units Docs Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp">
+
+                            <TextView
+                                android:id="@+id/txt_dropoffdetails_arrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:fontFamily="@font/bauhaus"
+                                android:gravity="center"
+                                android:text="ARRIVE"
+                                android:enabled="false"
+                                android:textColor="@color/med_grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_dropoffdetails_unload"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:fontFamily="@font/bauhaus"
+                                android:gravity="center"
+                                android:text="UNLOAD"
+                                android:enabled="false"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_dropoffdetails_docs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:fontFamily="@font/bauhaus"
+                                android:gravity="center"
+                                android:text="DOCS"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <!--Upload Go Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginTop="5sp">
+
+                            <TextView
+                                android:id="@+id/txt_dropoffdetails_upload"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:fontFamily="@font/bauhaus"
+                                android:gravity="center"
+                                android:text="UPLOAD"
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/txt_dropoffdetails_go"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/light_orange_button_drawable"
+                                android:fontFamily="@font/bauhaus"
+                                android:gravity="center"
+                                android:text="GO"
+                                android:enabled="false"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp"
+                    android:layout_marginTop="15sp"
+                    android:background="@color/tw_light_grey">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:fontFamily="@font/courier"
+                        android:text="Comments"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@drawable/white_color_rounded_layout">
+
+                    <EditText
+                        android:id="@+id/edt_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/white_color_rounded_layout"
+                        android:fontFamily="@font/courier"
+                        android:textColor="@color/black"
+                        android:gravity="start"
+                        android:hint="Received In Goods"
+                        android:paddingTop="5sp"
+                        android:paddingLeft="5sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@drawable/white_color_rounded_layout">
+
+                    <EditText
+                        android:id="@+id/edt_od_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/white_color_rounded_layout"
+                        android:fontFamily="@font/courier"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:hint="Name"
+                        android:paddingLeft="5sp"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20sp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/img_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="70sp"
+                        android:layout_margin="1sp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/txt_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/courier"
+                        android:gravity="center_vertical"
+                        android:text="Signature"
+                        android:paddingLeft="5sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginRight="10sp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_clearbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="60sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/btn_complete"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:background="@drawable/rounded_corner_black_button"
+                            android:fontFamily="@font/bauhaus"
+                            android:text="Complete"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_savebutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="60sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/btn_deadrun"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:background="@drawable/rounded_corner_black_button"
+                            android:fontFamily="@font/bauhaus"
+                            android:text="Deadrun"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

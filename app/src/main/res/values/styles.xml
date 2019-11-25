@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@color/red_dark</item>
+    </style>
+
+    <style name="gothic" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/gothic.ttf</item>
+    </style>
+
+    <style name="bauhaus" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/bauhaus93.ttf</item>
+    </style>
+
+    <style name="courier" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/courier.ttf</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/accepted_green</item> <!--checked-->
+        <item name="android:textColorSecondary">@color/black</item> <!--unchecked-->
+    </style>
+
+</resources>
